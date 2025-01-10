@@ -2,12 +2,12 @@
 
 import re
 nmr = []
-"""
+
 while True:
     def soma(*args):
         total = 0
         for numero in args:
-            total += numero
+            total *= numero
         return total
     
     entrada_user = input("Digite o numero para somar: ")
@@ -22,15 +22,15 @@ while True:
     if op == 1:
         continue
     elif op == 2:
-        soma_total = soma(*nmr)
-        print(F"Soma de todos os elmentos é {soma_total}.")
+        multipicação_total = soma(*nmr)
+        print(F"Soma de todos os elmentos é {multipicação_total}.")
         print("\nPROGRAMA ENCERRADO\n")
         break
-"""
+
 
 
 # Um função para se saber se o numero é impar ou par
-while True:
+"""while True:
     def impar_par(numero):
         deicisao = numero % 2
         print(f"Este numero [{numero}] é par"if deicisao == 0 else "Este numero é impar")
@@ -43,4 +43,4 @@ while True:
         continue
     Numero = int(nmr_user)
     impar_par(Numero)
-    break
+    break"""
