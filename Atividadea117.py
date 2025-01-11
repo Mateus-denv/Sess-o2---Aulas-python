@@ -3,6 +3,6 @@ def duplica():
         return numer*2
     return exibeD
 
-nmr = input("Digite um numero: ")
+nmr = int(input("Digite um numero: "))
 valor = duplica()
 print(valor(nmr))
