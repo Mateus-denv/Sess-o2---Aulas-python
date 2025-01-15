@@ -28,3 +28,12 @@ print(list(pessoa.items()))
 
 for chave in pessoa.values():
     ...#print(chave)
+    
+print(pessoa.get('Nomt','Não existe'))
+
+idade = pessoa.popitem()
+print(idade)
+print(pessoa)
+
+pessoa.update(Nome='Lucas')
+print(pessoa)
