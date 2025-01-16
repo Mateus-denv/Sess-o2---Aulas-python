@@ -14,26 +14,26 @@ pessoa['Codigo'] = [
 
 #print(pessoa)
 
-if  pessoa.get('Codigo') is None:
-    print('NÃO EXISTE')
-else:
-    print('EXISTE')
+#if  pessoa.get('Codigo') is None:
+    #print('NÃO EXISTE')
+#else:
+    #print('EXISTE')
 
-pessoa.setdefault('Idade', 0)
+#pessoa.setdefault('Idade', 0)
 # print(pessoa.__len__())
 # print(len(pessoa))
-# print(list(pessoa.keys()))
-# print(list(pessoa.values()))
-print(list(pessoa.items()))
+#print(list(pessoa.keys()))
+#print(list(pessoa.values()))
+#print(list(pessoa.items()))
 
 for chave in pessoa.values():
-    ...#print(chave)
+   print(chave)
     
-print(pessoa.get('Nomt','Não existe'))
+#print(pessoa.get('Nomt','Não existe'))
 
-idade = pessoa.popitem()
-print(idade)
-print(pessoa)
+#idade = pessoa.popitem()
+#print(idade)
+#print(pessoa)
 
-pessoa.update(Nome='Lucas')
-print(pessoa)
+#pessoa.update(Nome='Lucas')
+#print(pessoa)

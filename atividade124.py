@@ -2,18 +2,18 @@ respostas = None
 def verificacao(resp): 
     for index, chave in enumerate(perguntas):
         if resp == chave['Resposta']:
-            return True
-    return False
+            return 1
+        
 
 def enviar_resposta(env):
     try:
-        print(env)
-        print(chave['Opções'][env])
         respostas = chave['Opções'][env]
     except IndexError:
         print("Opção invalida")
+        respostas = None
+    return verificacao(resp=respostas)
+    
 
-    verificacao(resp=respostas)
 perguntas = [
     {
         'Pergunta':'Qual é o codigo?',
@@ -32,13 +32,20 @@ perguntas = [
     },
 ]
 
+acertos = 0
 for index, chave in enumerate(perguntas):
     print(perguntas[index]['Pergunta'])
     for index, chave_interna in enumerate(chave['Opções']):
         print(index,"-",chave_interna)
-    esc_op = int(input("|>"))
-    enviar_resposta(esc_op)
+    esc_op = int(input("Escolha uma Opção|>"))
     
+    condicao = enviar_resposta(esc_op) == 1
     
-    # print("Parabens Você acertou" if condicao else "Você errou")
-    # Parei onde esta dando erro no valor boleano
+    if condicao:
+        print("Parabens Você acertou")
+        acertos += 1
+    else:
+        print("Você errou")
+        
+print(f"Você acertou {acertos} de {3}")
+    
