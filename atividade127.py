@@ -32,15 +32,20 @@ lista_de_listas_de_inteiros = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
 
+
 def encontrar_primeiro_duplicado(lista_de_inteiros):
+    primeiro_numero = -1
+    numeros_checados = set()
     for numero in lista_de_inteiros:
-        print(numero)
+        if numero in numeros_checados:
+            primeiro_numero = numero
+            break
+        numeros_checados.add(numero)
+    return primeiro_numero
     print()
     print()
-    
-    
    
-    
+
 for lista in lista_de_listas_de_inteiros:
-    encontrar_primeiro_duplicado(lista)
+    print("Lista",lista,"\n","Numero repetido", encontrar_primeiro_duplicado(lista))
 
