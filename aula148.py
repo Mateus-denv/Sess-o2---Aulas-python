@@ -3,7 +3,7 @@
 # b = 0
 # c = a / b
 
-try:
+"""try:
     a = 18
     b = 0
     # print(b[0])
@@ -22,4 +22,32 @@ except (TypeError, IndexError) as error:
 except Exception:
     print('ERRO DESCONHECIDO.')
 
-print('CONTINUAR')
+print('CONTINUAR')"""
+
+# ATT1
+# Objetivo: Peça para o usuário digitar um número. Converta-o para int e trate o erro caso ele digite algo inválido.
+"""num = input("Digite um numero: ")
+try:
+    soma = num / 2
+except TypeError:
+    print("Este numero é uma STR")"""
+    
+    
+# ATT2
+# Objetivo: Solicite dois números e divida um pelo outro, tratando divisão por zero.
+
+entrada = int(input("Digite um numero: "))
+entrada2 = int(input("Digite outro numero: "))
+try:
+    divisao = entrada // entrada2
+    print(divisao)
+    divisao2 = entrada2 // entrada
+    print(divisao)
+except ZeroDivisionError:
+    print("Não é possiviel dividisão por zero 0")
+    
+# ATT3
+# Objetivo: Peça um índice e tente acessar esse índice em uma lista fixa.
+
+# ATT4
+# Objetivo: Tente abrir um arquivo que o usuário digitar. Trate erro se ele não existir.
