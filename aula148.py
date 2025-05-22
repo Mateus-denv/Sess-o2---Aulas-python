@@ -1,4 +1,4 @@
-# try e except para tratar exceções
+# try e except, else e finally para tratar exceções
 # a = 18
 # b = 0
 # c = a / b
@@ -36,7 +36,7 @@ except TypeError:
 # ATT2
 # Objetivo: Solicite dois números e divida um pelo outro, tratando divisão por zero.
 
-entrada = int(input("Digite um numero: "))
+"""entrada = int(input("Digite um numero: "))
 entrada2 = int(input("Digite outro numero: "))
 try:
     divisao = entrada // entrada2
@@ -44,10 +44,18 @@ try:
     divisao2 = entrada2 // entrada
     print(divisao)
 except ZeroDivisionError:
-    print("Não é possiviel dividisão por zero 0")
+    print("Não é possiviel dividisão por zero 0")"""
     
 # ATT3
 # Objetivo: Peça um índice e tente acessar esse índice em uma lista fixa.
-
-# ATT4
-# Objetivo: Tente abrir um arquivo que o usuário digitar. Trate erro se ele não existir.
+nome = input('digite um nome: ')
+print(f"Este nome é {nome} ")
+try:
+    print(f"A a primeria letra é {nome[0]}")
+except IndexError:
+    print("Este index não existe")
+else:
+    print("Ocorreu como deveria")
+finally:
+    print(f"O utimo digito é {nome[6]}")
+    
