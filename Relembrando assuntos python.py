@@ -62,3 +62,12 @@ print("7-",not "Saque 1500") # Uma string com valor é TRUE
 
 print("8-", (valor1 == valor1) and (valor2 < valor3) or (valor2 > valor3))
 
+### Operadores de identidade
+print("\nOperadores de identidade")
+
+saldo = 1000
+limite = 1000
+
+print(saldo is limite)
+print(saldo is not limite)
+
