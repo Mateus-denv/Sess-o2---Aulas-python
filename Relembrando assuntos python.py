@@ -21,3 +21,24 @@ print("\nOrdem de execução")
 print(produto1 + produto2 - produto1 * produto2)
 #        10    +    20    -    10    *    20
 print(produto1 + produto2 - ((produto1 * produto2) // produto1 % produto2))
+
+### Operadores de atribuição
+
+print("\nOperadores de atribuição")
+
+saldo1 = 200
+saldo1 += 200
+print(saldo1)
+
+saldo2 = 100
+saldo2 //= 2
+print(saldo2)
+
+saldo3 = 500
+saldo3 *= 2
+print(saldo3)
+
+saldo4 = 12
+saldo4 **= 2
+print(saldo4)
+
