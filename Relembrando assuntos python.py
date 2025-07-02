@@ -42,3 +42,23 @@ saldo4 = 12
 saldo4 **= 2
 print(saldo4)
 
+### Operadores de Lógicos
+print("\nOperadores Lógicos")
+
+valor1 = 10
+valor2 = 20
+valor3 = 30
+
+print("1-",valor1 < valor2)
+print("2-",valor2 >= valor3)
+print("3-",valor2 < valor2 or valor3 == valor1)
+print("4-",valor1 == valor1 and valor3 > valor1)
+print("5-",not 1000 > 1500) # o NOT inverte o resultado do boolean
+
+contatos_emergencia = [] # Uma lista vazia é false
+print("6-",not contatos_emergencia)
+
+print("7-",not "Saque 1500") # Uma string com valor é TRUE
+
+print("8-", (valor1 == valor1) and (valor2 < valor3) or (valor2 > valor3))
+
