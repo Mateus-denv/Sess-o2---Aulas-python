@@ -71,3 +71,14 @@ limite = 1000
 print(saldo is limite)
 print(saldo is not limite)
 
+### Operadores de associação
+print("\nOperadores de associação")
+
+curso = "Curso de Python"
+frutas = ["Laranja","uva", "limão"]
+saques = ["100","200"]
+
+print('Python' in curso)
+print('Laranja' not  in curso)
+print('200' in saques)
+
