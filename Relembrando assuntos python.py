@@ -197,3 +197,15 @@ PI = 3.14159
 print(f"Valor de pi é {PI:.2f}") # Limita a quantidade de numeros após a virgula(pomto)
 print(f"Valor de pi é {PI:10.2f}") # Adiciona espaçoes antes do valor da vareavel e limita a quantidade de numeros após a virgula(pomto)
 
+## Fatiamento de strings
+print("\nFatiamento de strings")
+
+nome1 = "Python"
+nome2 = "João Guilherme de Souza"
+
+print(nome1[2]) # Pega um cacter
+print(nome2[5:]) # Inicio
+print(nome2[5:15]) # Inicio, fim 
+print(nome2[5:15:5]) # Inicio, fim e pulando
+print(nome2[::-1]) # Inverte a string
+
