@@ -111,3 +111,39 @@ print(f"{status} ao realizar o saque!")
 
 
 
+## Estruturas de repetições
+
+print("\nEstruturas de repetições")
+
+### For
+print("For")
+
+num = int(input("Digite um numero inteiro: "))
+print(num)
+
+frase = "Vamos lá"
+for  letra in frase:
+    print(letra, end = '-')
+
+for  numm in range(num):
+    print(numm)
+    
+for valor in range(0, 51, 5):
+    print(valor)
+    
+### While
+print("\nWhile")
+
+opção = True
+while opção:
+    usuario = int(input("\nDgite um numero para saber se é par ou impar ou 0 para sair: "))
+    resto = usuario % 2
+    if resto == 0 and usuario != 0:
+        print("Seu numero é par")
+    elif resto > 0:
+        print("Seu numero é impar")
+    else:
+        opção = False
+else:
+    print("Saindo")
+    
