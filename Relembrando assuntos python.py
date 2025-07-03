@@ -84,3 +84,30 @@ print('Laranja' not  in curso)
 print('200' in saques)
 
 """ 
+## Estruturas de condicionais
+ 
+print("\nEstruturas de condicionais")
+saldo = 200
+saque = 201
+
+condição = 18
+idade_usuario = 18
+
+if condição > idade_usuario:
+    print("Você não é maior de idade")
+elif condição <= idade_usuario:
+    print("Você é maior de idade idade")
+    if saque > saldo:
+        print("Você você não tem saldo suficiente")
+    else:
+        print("Saque realizado")
+else:
+    print("Não legivel")
+    
+### if ternario
+
+status = "Sucesso" if saldo >= saque else "Falha"
+print(f"{status} ao realizar o saque!")
+
+
+
