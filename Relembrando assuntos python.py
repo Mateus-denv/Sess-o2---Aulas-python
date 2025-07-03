@@ -1,4 +1,5 @@
 # Relembrando assuntos python
+"""
 ## Tipos de operadoes
 ### Operadores aritméticos
 print("Operadores aritméticos")
@@ -82,3 +83,4 @@ print('Python' in curso)
 print('Laranja' not  in curso)
 print('200' in saques)
 
+""" 
