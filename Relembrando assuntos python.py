@@ -168,3 +168,32 @@ print(curso.rstrip()) # Remove os espaços em brancos da direita
 print(curso.center(20,"-")) # Centraliza por meio de caracteres (exemplo: --PYTHON--)
 print(".".join(curso)) # Adiciona um caracter apos cada item
 
+## Interpolação de variáreis 
+print("\nInterpolação de variáreis")
+### Utilizando %
+print("Utilizando %")
+nome = "Matheus"
+idade = 19
+profissao = "Programador"
+linguagem = "Python"
+
+print("Olá meu nome é %s tenho %d anos trabalho como %s utilizando %s." % (nome,idade,profissao,linguagem))
+
+### Utilizando .format
+print("\nUtilizando .format")
+print("Opção 1")
+print("Olá meu nome é {0} tenho {1} anos trabalho como {2} utilizando {3}." .format(nome,idade,profissao,linguagem))
+
+print("\nOpção 2")
+print("Olá meu nome é {nome} tenho {idade} anos trabalho como {profissao} utilizando {linguagem}." .format(nome=nome,idade=idade,profissao=profissao,linguagem=linguagem))
+
+#print("\nOpção 3")
+#print("Olá meu nome é {nome} tenho {idade} anos trabalho como {profissao} utilizando {linguagem}." .format(**pessoa))
+
+### Utilizando f-string
+print(f"Olá meu nome é {nome} tenho {idade} anos trabalho como {profissao} utilizando {linguagem}.")
+
+PI = 3.14159
+print(f"Valor de pi é {PI:.2f}") # Limita a quantidade de numeros após a virgula(pomto)
+print(f"Valor de pi é {PI:10.2f}") # Adiciona espaçoes antes do valor da vareavel e limita a quantidade de numeros após a virgula(pomto)
+
