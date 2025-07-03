@@ -147,3 +147,24 @@ while opção:
 else:
     print("Saindo")
     
+## Manipulando Strings
+
+print("\nManipulando Strings")
+
+### Métodos
+print("Métodos")
+nome = "maTeuS"
+curso = "  PYTHON "
+
+print(nome.upper()) # Converte tudo em maiúsculo
+print(nome.lower()) # Converte tudo em minúscula
+print(nome.title()) # Converte tudo em título
+
+print(curso.strip()) # Remove todos os espaços em brancos 
+# Podendo utilizalo assim print(curso.strip() + ".") cmd>>> Python.
+print(curso.lstrip()) # Remove os espaços em brancos da esquerda
+print(curso.rstrip()) # Remove os espaços em brancos da direita
+
+print(curso.center(20,"-")) # Centraliza por meio de caracteres (exemplo: --PYTHON--)
+print(".".join(curso)) # Adiciona um caracter apos cada item
+
