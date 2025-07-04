@@ -56,6 +56,8 @@ while True:
             print(chave)
                       
     elif opcao == "Q":# Sair
-        ...
+        print("\nPrograma encerrado")
+        break
+    
     else:
-        print("N")
+        print("Opção invalida\n")
