@@ -49,7 +49,12 @@ while True:
             print(f"Não é possivel realizar mais saques\nLIMITE DE SAQUE DIARIO: {LIMITES_DE_SAQUES}")
             
     elif opcao == "E":# Extrato
-        ...
+        extrato.update({f"Saldo":f"R$ {saldo}"})
+        print("Extrato".center(20,"-"))
+        
+        for chave in extrato.items():
+            print(chave)
+                      
     elif opcao == "Q":# Sair
         ...
     else:
