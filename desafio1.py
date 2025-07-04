@@ -30,7 +30,24 @@ while True:
     elif opcao == "S":# Saldo
         print(f"Seu saldo atual é de {saldo}")
     elif opcao == "C":# Sacar
-        sacar = input(f"Quanto deseja sacar?\n>>>")
+        if LIMITES_DE_SAQUES != 0:
+            sacar = float(input(f"Quanto deseja sacar?\n>>>"))
+            
+            if sacar < 500:
+                
+                if sacar > 0 and sacar < saldo:
+                    extrato.update({f"Saque{LIMITES_DE_SAQUES}":f"R$ -{sacar}"})
+                    LIMITES_DE_SAQUES -= 1
+                    saldo -= sacar
+                    print("Saques realizado com sucesso")
+                else:
+                    print(f"Você não possui saldo suficiente\nSaldo: R$ {saldo}")
+                    
+            else: 
+                print("Não é possivel realizar saques acima de R$ 500")
+        else:
+            print(f"Não é possivel realizar mais saques\nLIMITE DE SAQUE DIARIO: {LIMITES_DE_SAQUES}")
+            
     elif opcao == "E":# Extrato
         ...
     elif opcao == "Q":# Sair
