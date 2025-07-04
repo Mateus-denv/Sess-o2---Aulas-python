@@ -19,6 +19,14 @@ while True:
     opcao = input(menu).upper()
     
     if opcao == "D":# Depositar
+        entrada = int(input("Qual o valor do deposito:\n>>>"))
+        if entrada > 0:
+            cont += 1
+            saldo += entrada
+            extrato.update({f"Entrada{cont}":entrada})
+        else:
+            print("Não foi possivel realizar o deposito")
+                
     elif opcao == "S":# Saldo
         print(f"Seu saldo atual é de {saldo}")
     elif opcao == "C":# Sacar
