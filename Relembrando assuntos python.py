@@ -86,7 +86,7 @@ print('200' in saques)
 """ 
 
 ## Estruturas de condicionais
- 
+"""
 print("\nEstruturas de condicionais")
 saldo = 200
 saque = 201
@@ -214,8 +214,8 @@ print(nome2[::-1]) # Inverte a string
 print("\nString de multiplas linhas")
 
 nome = "Matheus"
-mensaguem = f"""Olá meu nome é {nome}
-Estou no 3 semestre de TI"""
+mensaguem = f""Olá meu nome é {nome}
+Estou no 3 semestre de TI""
 
 print(mensaguem)
 
