@@ -56,3 +56,72 @@ print(numeros_2x)
 lista_8 = [(n**2 if n > 6 else n) for n in range(10) if n % 2 == 0] 
 print(lista_8)
 """
+## Metodos da classes list
+"""print("\nMetodos da classes list")
+
+print("\nAPPEND")
+lista_1 = []
+lista_1.append("Oi")
+lista_1.append(1.5)
+lista_1.append([10,12,20])
+print(lista_1)
+
+
+print("\nCOPY E CLEAR")
+lista_2 = lista_1.copy()
+lista_1.clear()
+print(lista_1)
+print(lista_2)
+
+print("\nCOUNT")
+print(lista_2.count(1.5)) # Conta quantas vezes o elemento aparece na lista
+
+print("\nEXTEND")
+lista_3 = ["20",25]
+lista_3.extend(lista_2)
+print(lista_3)
+
+print("\nINDEX")
+print(lista_3.index("Oi"))
+
+print("\nPOP")
+lista_3.pop(3)
+print(lista_3)
+
+print("\nREMOVE")
+lista_3.remove("Oi")
+print(lista_3)
+
+print("\nREVERSE")
+lista_3.reverse()
+print(lista_3)
+
+print("\nSORT ORDEM A-Z")
+lista_4 = ["ANA", "JULIA", "BIA", "LORENA", "MATEUS", "HENRRIQUE"]
+lista_4.sort()
+print(lista_4)
+
+print("\nSORT ORDEM Z-A")
+lista_4.sort(reverse=True)
+print(lista_4)
+
+print("\nSORT ORDEM POR TAMANHO .len()")
+lista_4.sort(key=lambda x: len(x))
+print(lista_4)
+
+print("\nSORT ORDEM POR TAMANHO .len() reverse")
+lista_4.sort(key=lambda x: len(x), reverse=True)
+print(lista_4)
+
+print("\n.len()")
+print(len(lista_4))
+
+print("\nSORTED A-Z")
+print(sorted(lista_4))
+
+print("\nSORTED .len()")
+print(sorted(lista_4,key=lambda x: len(x) ))
+
+print("\nSORTED .len() reverse")
+print(sorted(lista_4,key=lambda x: len(x), reverse=True))
+
