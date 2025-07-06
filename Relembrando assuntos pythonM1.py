@@ -220,3 +220,44 @@ Estou no 3 semestre de TI""
 print(mensaguem)
 
 """ 
+# Funções
+"""print("\nFunções\n")
+
+def exibir_mensagem():
+    print("Olá mundo")
+    
+def exibir_mensagem_2(nome):
+    print(f"Seja bem vindo, {nome}")
+
+def exibir_mensagem_3(nome="João"):
+    print(f"Seja bem vindo, {nome}")
+
+exibir_mensagem()
+exibir_mensagem_2("Pedro")
+exibir_mensagem_3()
+
+    
+def retorna_sucessor_e_antecesor(numero):
+    antecessor = numero -1
+    sucessor = numero +1
+    return antecessor, sucessor
+
+def calcuclar_total(numero):
+    return sum(numero)
+
+print(calcuclar_total([10,20,30]))
+print(retorna_sucessor_e_antecesor(10))
+print("\n")
+def salva_moto (marca, ano, modelo, quilometragem):
+    print(f'Moto adcionada\nModelo:{modelo}\nMarca:{marca}\nAno:{ano}\nQuilometragem:{quilometragem}')
+    
+print("SIMPLES")    
+salva_moto("HONDA",2015,"CG125",1200.2)
+
+print("\nNOMEADO")    
+salva_moto(marca="HONDA", ano=2015, modelo="CG125", quilometragem=1200.2)
+
+print("\nNOMEADO COMO DICIONARIO")    
+salva_moto(**{"marca": "HONDA", "modelo":"CG125","ano": 2015, "quilometragem" : 1200.2})
+"""
+
