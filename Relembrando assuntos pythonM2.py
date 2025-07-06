@@ -151,3 +151,121 @@ print(tupla.count)
 print(nomes.index("ANA"))
 print(len(tupla))
 """
+## Estruturas de dados sets {}
+"""print("\nEstruturas de dados\n")
+
+print(set([1,2,3,4,5,5]))
+print(set("abacaxi"))
+
+liguagens = set(("Python", "Java", "Python"))
+print(liguagens)
+
+carros = {"uno", "gol", "fiat", "gol"}
+print(set(carros))
+
+### Acessando valores
+print("\nAcessando valores")
+
+numeros = {1,2,3,4}
+print(numeros)
+
+for index, carro in enumerate(carros):
+    print(f"{index}: {carro}")
+    
+### Union
+print("\nunion")
+conjunto_a = {1,2}
+conjunto_b = {1,2,3,4,5}
+print(conjunto_a.union(conjunto_b))
+
+### intersection -> remove os iguais
+print("\nintersection")
+conjunto_a = {1,2,3}
+conjunto_b = {1,2,3,4,5}
+print(conjunto_a.intersection(conjunto_b))
+
+### difference -> remove os diferentes
+print("\ndifference")
+conjunto_a = {1,2,3}
+conjunto_b = {1,2,3,4,5}
+print(conjunto_a.difference(conjunto_b))
+
+### Symmetric_difference -> os elementos que não são iguais
+print("\nsymmetric_difference")
+conjunto_a = {1,2,3}
+conjunto_b = {1,2,3,4,5}
+print(conjunto_a.symmetric_difference(conjunto_b))
+
+### issubset -> Se dentro de um conjunto a outro por inteiro ou seja se todos os elementos que estão no A tambem estão em B
+print("\nissubset")
+conjunto_a = {1,2,3}
+conjunto_b = {1,2,3,4,5}
+
+print(conjunto_a.issubset(conjunto_b))
+print(conjunto_b.issubset(conjunto_a))
+
+### isdisjoint -> Se não a nenhum elemento igual nos conjunto nenhum conjunto 
+print("\nisdisjoint")
+conjunto_a = {10,22,44}
+conjunto_b = {1,2,3,4,5}
+conjunto_c = {7,8,9,10}
+
+print(conjunto_a.isdisjoint(conjunto_b))
+print(conjunto_a.isdisjoint(conjunto_c))
+
+### .add -> Se não existir ele é adcionado
+print("\n.add")
+sorteio_a = {10,22,44}
+
+sorteio_a.add(1)
+sorteio_a.add(12)
+
+print(sorteio_a)
+
+### .clear -> limpar
+print("\n.add")
+sorteio_a = {10,22,44}
+
+sorteio_a.clear()
+print(sorteio_a)
+
+### .copy -> cria ma copia
+print("\n.copy")
+sorteio_a = {10,22,44}
+
+sorteio_b = sorteio_a.copy()
+print(sorteio_b)
+
+### .discard -> descarta um elemento
+print("\n.discard")
+sorteio_a = {10,22,44}
+
+sorteio_a.discard(10)
+print(sorteio_a)
+
+### .pop -> retira sempre o valor da frente
+print("\n.pop")
+sorteio_a = {5,9,10,22,44}
+
+sorteio_a.pop()
+print(sorteio_a)
+
+### .remove -> remove recebendo um valor se o valor existir
+print("\n.remove")
+sorteio_a = {5,9,10,22,44}
+
+sorteio_a.remove(9)
+print(sorteio_a)
+
+### .len
+print("\n.len")
+sorteio_a = {5,9,10,22,44}
+
+print(len(sorteio_a))
+
+### in -> verificar se o elemento existe no conjunto
+print("\nin")
+sorteio_a = {5,9,10,22,44}
+
+print(1 in(sorteio_a))
+"""
