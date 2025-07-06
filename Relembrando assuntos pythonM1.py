@@ -210,3 +210,13 @@ print(nome2[5:15]) # Inicio, fim
 print(nome2[5:15:5]) # Inicio, fim e pulando
 print(nome2[::-1]) # Inverte a string
 
+## String de múltiplas linhas
+print("\nString de multiplas linhas")
+
+nome = "Matheus"
+mensaguem = f""Olá meu nome é {nome}
+Estou no 3 semestre de TI""
+
+print(mensaguem)
+
+""" 
