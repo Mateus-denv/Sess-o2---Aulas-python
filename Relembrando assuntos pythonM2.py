@@ -307,3 +307,51 @@ teste = {}
 print(teste.fromkeys(["nome","telefone"]))
 print(teste.fromkeys(["nome","telefone"],"vazio"))
 
+## get
+print("\n.get")
+
+print(pessoa.get("v", {})) # Se não encontra retorna algo
+
+### items
+print("\n.items")
+print(pessoa.items())
+
+### keys
+print("\n.keys")
+print(pessoa.keys())
+
+### pop
+print("\n.pop")
+print(pessoa.pop("nome"), {})
+print(pessoa)
+
+### popintem
+print("\n.popintem")
+print(pessoa.popitem())
+print(pessoa)
+
+### sefdefault
+print("\n.setdefault")
+print(pessoa.setdefault("nome","julia"))
+print(pessoa)
+
+### Update
+print("\n.update")
+pessoa.update(dicionario_2)
+print(pessoa)
+
+### Values
+print("\n.Values")
+print(pessoa.values())
+
+### in
+print("\n in")
+resultado = "nome" in pessoa
+print(resultado)
+
+### del
+print("\n.del")
+del pessoa["nome"]
+print(pessoa)
+"""
+
