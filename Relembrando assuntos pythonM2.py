@@ -125,3 +125,29 @@ print(sorted(lista_4,key=lambda x: len(x) ))
 print("\nSORTED .len() reverse")
 print(sorted(lista_4,key=lambda x: len(x), reverse=True))
 
+## tuplas
+print("\ntuplas\n")
+
+nomes = ("ANA", "JULIA", "BIA", "LORENA", "MATEUS", "HENRRIQUE",)
+print(nomes[2])
+print(nomes[-4])
+
+matriz_tupla = (
+    (1,2,3),
+    (3,4,5),
+    (4,5,6)
+)
+print(matriz_tupla[2][1])
+
+tupla = ("p","y","t","h","o","n")
+
+print(tupla[:4])
+print(tupla[::-1])
+
+## Metodos da classes tuplas
+print("\nMetodos da classes tuplas")
+
+print(tupla.count)
+print(nomes.index("ANA"))
+print(len(tupla))
+"""
