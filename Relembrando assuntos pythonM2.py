@@ -269,3 +269,41 @@ sorteio_a = {5,9,10,22,44}
 
 print(1 in(sorteio_a))
 """
+## Dicionarios: Criação e acesso aos dados
+
+"""pessoa = {"nome":"guilherme", "idade": 28}
+
+pessoa = dict(nome ="guilherme", idade =28)
+
+print(pessoa)
+pessoa["telefone"] = "74-658-654-211"
+
+print(pessoa["telefone"])
+
+dicionario = {
+    "joao": {"idade": 12, "possue": True},
+    "pedro": {"idade": 15, "possue": True},
+    "guilherme": {"idade": 18, "possue": True}
+}
+
+print(dicionario["guilherme"]["idade"])
+print("\n")
+for chave,valor  in dicionario.items():
+    print(f"{chave}:{valor}")
+    
+## Metodos class dict
+print("\nMetodos class dict\n")
+
+print("\nCopy\n")
+dicionario_2 = dicionario.copy()
+print(dicionario_2)
+
+print("Clear")
+dicionario.clear()
+print(dicionario)
+
+print("\n.fromkeys\n")
+teste = {}
+print(teste.fromkeys(["nome","telefone"]))
+print(teste.fromkeys(["nome","telefone"],"vazio"))
+
