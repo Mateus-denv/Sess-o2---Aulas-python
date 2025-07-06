@@ -355,3 +355,56 @@ del pessoa["nome"]
 print(pessoa)
 """
 
+## Trabalhando com objetos date, datetime e time
+
+"""from datetime import date,datetime, time
+data = date(2023,7,19).today()
+print(data)
+
+data_hora = datetime(11,11,11,).today()
+print(data_hora)
+
+hora = time(10,20,0)
+print(hora)
+"""
+## Manipulando datas com timedelta
+"""import datetime
+
+d = datetime.datetime(2025,7,2,14,50)
+d = d + datetime.timedelta(weeks=1)
+print(d)"""
+
+### Montando exemplo
+"""
+from datetime import date, datetime, timedelta, time
+
+tipo_carro = ''
+tempo_pequeno  = 100
+tempo_medio = 200
+tempo_grande = 1000
+data_atual = datetime.now()
+
+if tipo_carro == 'p':
+    data_estimada = data_atual + timedelta(minutes=tempo_pequeno)
+    print(f"Data prevista é {data_estimada}")
+    
+elif tipo_carro == 'm':
+    data_estimada = data_atual + timedelta(minutes=tempo_medio)
+    print(f"Data prevista é {data_estimada}")
+
+else:
+    data_estimada = data_atual + timedelta(minutes=tempo_grande)
+    print(f"Data prevista é {data_estimada}")
+    
+    
+### Mostrando somente o prazo com dias
+print(date.today() - timedelta(days=1))
+
+### Mostrando somente o prazo com horas
+resultado = datetime(2025,7,5,10,30,0) - timedelta(hours=1)
+print(resultado.time())
+
+### Mostrando somente a data atual sem prazos
+
+print(datetime.now().date())
+"""
