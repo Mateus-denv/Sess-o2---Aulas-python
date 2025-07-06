@@ -85,3 +85,87 @@ print('200' in saques)
 
 """ 
 
+## Estruturas de condicionais
+"""
+print("\nEstruturas de condicionais")
+saldo = 200
+saque = 201
+
+condição = 18
+idade_usuario = 18
+
+if condição > idade_usuario:
+    print("Você não é maior de idade")
+elif condição <= idade_usuario:
+    print("Você é maior de idade idade")
+    if saque > saldo:
+        print("Você você não tem saldo suficiente")
+    else:
+        print("Saque realizado")
+else:
+    print("Não legivel")
+    
+### if ternario
+
+status = "Sucesso" if saldo >= saque else "Falha"
+print(f"{status} ao realizar o saque!")
+
+
+
+## Estruturas de repetições
+
+print("\nEstruturas de repetições")
+
+### For
+print("For")
+
+num = int(input("Digite um numero inteiro: "))
+print(num)
+
+frase = "Vamos lá"
+for  letra in frase:
+    print(letra, end = '-')
+
+for  numm in range(num):
+    print(numm)
+    
+for valor in range(0, 51, 5):
+    print(valor)
+    
+### While
+print("\nWhile")
+
+opção = True
+while opção:
+    usuario = int(input("\nDgite um numero para saber se é par ou impar ou 0 para sair: "))
+    resto = usuario % 2
+    if resto == 0 and usuario != 0:
+        print("Seu numero é par")
+    elif resto > 0:
+        print("Seu numero é impar")
+    else:
+        opção = False
+else:
+    print("Saindo")
+    
+## Manipulando Strings
+
+print("\nManipulando Strings")
+
+### Métodos
+print("Métodos")
+nome = "maTeuS"
+curso = "  PYTHON "
+
+print(nome.upper()) # Converte tudo em maiúsculo
+print(nome.lower()) # Converte tudo em minúscula
+print(nome.title()) # Converte tudo em título
+
+print(curso.strip()) # Remove todos os espaços em brancos 
+# Podendo utilizalo assim print(curso.strip() + ".") cmd>>> Python.
+print(curso.lstrip()) # Remove os espaços em brancos da esquerda
+print(curso.rstrip()) # Remove os espaços em brancos da direita
+
+print(curso.center(20,"-")) # Centraliza por meio de caracteres (exemplo: --PYTHON--)
+print(".".join(curso)) # Adiciona um caracter apos cada item
+
