@@ -34,9 +34,7 @@ def vericar_limite():
     
     # Data da renovação de limite
     data_limite = datetime.now(timezone(timedelta(hours=-3+LIMITE_DIARIO))).strftime(mascara_ptbr)
-    
-    print(data_limite)
-    
+        
     validacao = data_hora_atual <= data_limite and trasacoes_realizadas <= LIMITES_DE_TRANSACOES_DIARIAS
     
     return validacao
