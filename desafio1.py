@@ -40,7 +40,32 @@ def vericar_limite():
     validacao = data_hora_atual <= data_limite and trasacoes_realizadas <= LIMITES_DE_TRANSACOES_DIARIAS
     
     return validacao
+
+def atualizar_extrato(tipo, valor):
+    if tipo == "Deposito":
         
+        data_deposito = datetime.now(timezone(timedelta(hours=-3))).strftime(mascara_ptbr)
+        extrato.append(f"{tipo} R$ {valor:.2f} {data_deposito}")
+        
+    elif tipo == "Saque":
+        
+        data_saque = datetime.now(timezone(timedelta(hours=-3))).strftime(mascara_ptbr)
+        extrato.append(f"{tipo} R$ -{valor:.2f} {data_saque}")
+        
+    else:
+        print("Não foi possivel realizar transação")
+   
+def ver_saldo():
+    print(f"Seu saldo atual é de R$ {saldo}")
+    
+def ver_extrato():
+    print("Extrato".center(50,"-"))
+    
+    for chave in extrato:
+        print(f"{chave}".center(50," "))
+            
+    print(f"Saldo total: {saldo:.2f}".center(50," "))
+
 while True:
     print("BANCO PAN")
     
