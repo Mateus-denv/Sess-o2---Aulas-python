@@ -86,7 +86,7 @@ while True:
             print(f"Você atingiu o limite diario\nNão é possivel realizar mais transações até {data_hora_atual}")
     
     elif opcao == "S":# Saldo
-        print(f"Seu saldo atual é de R$ {saldo}")
+        ver_saldo()
         
     elif opcao == "C":# Sacar
         if LIMITES_DE_SAQUES != 0:
