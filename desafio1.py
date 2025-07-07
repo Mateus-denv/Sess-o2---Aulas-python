@@ -72,15 +72,21 @@ while True:
     opcao = input(menu).upper()
     
     if opcao == "D":# Depositar
-        entrada = float(input("Qual o valor do deposito:\n>>>"))
-        
-        if entrada > 0:
-            cont += 1
-            saldo += entrada
-            extrato.update({f"Deposito{cont}": f"R$ {entrada}"})
+        if vericar_limite() == True:
+            
+            entrada = float(input("Qual o valor do deposito:\n>>> "))
+            
+            if entrada > 0:
+                saldo += entrada
+                trasacoes_realizadas += 1
+                atualizar_extrato("Deposito",entrada)
+                print("Deposito realizado com sucesso")
+
+            else:
+                print("Não é possivel realizar transações abaixo de R$ 1,00")
         else:
-            print("Não foi possivel realizar o deposito")
-                
+            print(f"Você atingiu o limite diario\nNão é possivel realizar mais transações até {data_hora_atual}")
+    
     elif opcao == "S":# Saldo
         print(f"Seu saldo atual é de R$ {saldo}")
         
