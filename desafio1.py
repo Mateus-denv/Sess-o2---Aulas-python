@@ -17,12 +17,11 @@ menu = """
 [Q] Sair
 
 """
+LIMITES_DE_TRANSACOES_DIARIAS = 10
+LIMITE_PARA_SAQUE = 500
+trasacoes_realizadas = 0
+extrato = []
 saldo = 0
-limite_para_saque = 500
-extrato = {}
-numero_de_saques = 0
-LIMITES_DE_SAQUES = 3
-cont = 0       
 
         
 while True:
