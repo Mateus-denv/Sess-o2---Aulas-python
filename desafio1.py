@@ -66,8 +66,8 @@ def ver_extrato():
             
     print(f"Saldo total: {saldo:.2f}".center(50," "))
 
+print(" BANCO PAN ".center(50,":"))
 while True:
-    print("BANCO PAN")
     
     opcao = input(menu).upper()
     
