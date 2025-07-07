@@ -89,30 +89,28 @@ while True:
         ver_saldo()
         
     elif opcao == "C":# Sacar
-        if LIMITES_DE_SAQUES != 0:
-            sacar = float(input(f"Quanto deseja sacar?\n>>>"))
+        if vericar_limite() == True:
+            valor = float(input(f"Quanto deseja sacar?\n>>> "))
             
-            if sacar < 500:
+            if valor < 500.00:
                 
-                if sacar > 0 and sacar < saldo:
-                    extrato.update({f"Saque{LIMITES_DE_SAQUES}":f"R$ -{sacar}"})
-                    LIMITES_DE_SAQUES -= 1
-                    saldo -= sacar
-                    print("Saques realizado com sucesso")
+                if valor > 0 and valor <= saldo:
+                    trasacoes_realizadas += 1
+                    saldo -= valor
+                    atualizar_extrato("Saque",valor)
+                    print("Saque realizado com sucesso")
+                    
                 else:
                     print(f"Você não possui saldo suficiente\nSaldo: R$ {saldo}")
                     
             else: 
                 print("Não é possivel realizar saques acima de R$ 500")
+                
         else:
-            print(f"Não é possivel realizar mais saques\nLIMITE DE SAQUE DIARIO: {LIMITES_DE_SAQUES}")
+            print(f"Você atingiu o limite diario\nNão é possivel realizar mais transações")
             
     elif opcao == "E":# Extrato
-        extrato.update({f"Saldo":f"R$ {saldo}"})
-        print("Extrato".center(20,"-"))
-        
-        for chave in extrato.items():
-            print(chave)
+        ver_extrato()
                       
     elif opcao == "Q":# Sair
         print("\nPrograma encerrado")
