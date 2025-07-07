@@ -7,6 +7,7 @@
 # - Restringir o número de saques a 10 por dia;
 # - Registrar todas as movimentações em um extrato, acessível mediante solicitação do usuário.
 
+from datetime import datetime, timedelta, timezone
 
 menu = """
 [D] depositar

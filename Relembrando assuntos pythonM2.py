@@ -408,3 +408,41 @@ print(resultado.time())
 
 print(datetime.now().date())
 """
+### Formatando e convertendo datas com strftime e strptime
+
+from datetime import datetime
+
+data_hora_atual = datetime.now()
+data_hora_string = "2025-07-08 10:20"
+
+### Formando a data e hora
+mascara_ptbr = '%d/%m/%Y %a'
+mascara_enusa = "%Y-%m-%d %H:%M"
+
+print(data_hora_atual.strftime(mascara_ptbr)) # strftime serve para converter
+
+print(datetime.strptime(data_hora_string, mascara_enusa))
+
+### Trabanhando com timezone
+
+"""#### utilizando o pytz
+import datetime
+import pytz
+
+from datetime import datetime
+
+data = datetime.now(pytz.timezone('Europe/Oslo'))
+data2 = datetime.now(pytz.timezone('America/Sao_Paulo'))
+
+print(data)
+print(data2)"""
+
+#### Utilizando o timezone
+"""
+from datetime import datetime, timedelta, timezone
+
+data_os = datetime.now(timezone(timedelta(hours=2))) # Oslo
+data_sp = datetime.now(timezone(timedelta(hours=-3))) # São Paulo
+
+print(data_os)
+print(data_sp)"""
