@@ -23,6 +23,23 @@ trasacoes_realizadas = 0
 extrato = []
 saldo = 0
 
+# Mascara no padrão brasileiro
+mascara_ptbr = '%d/%m/%Y %H:%M'
+# Data e hora atual SP
+data_hora_atual = datetime.now(timezone(timedelta(hours=-3))).strftime(mascara_ptbr)
+
+def vericar_limite():
+    # Limite para de 1 dia para proximas 10 trasações
+    LIMITE_DIARIO = 1
+    
+    # Data da renovação de limite
+    data_limite = datetime.now(timezone(timedelta(hours=-3+LIMITE_DIARIO))).strftime(mascara_ptbr)
+    
+    print(data_limite)
+    
+    validacao = data_hora_atual <= data_limite and trasacoes_realizadas <= LIMITES_DE_TRANSACOES_DIARIAS
+    
+    return validacao
         
 while True:
     print("BANCO PAN")
