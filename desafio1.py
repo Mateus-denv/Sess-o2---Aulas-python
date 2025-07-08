@@ -261,9 +261,19 @@ print(" BANCO VILAVELHA ".center(50,":"))
 while True:
     
     opcao = input(menu).upper() # Solicita a opção do usuário e converte para maiúsculo
+    if opcao == "U": # Criar conta
+        
+        nome = input("Qual seu nome?\n>>> ")
+        data_de_nascimento = input("\nQual sua data de nascimento?\nSiga esse padrão 11-11-2005\n>>> ")
+        
+
+        print(criar_usuario(nome,data_de_nascimento))
+        
+    elif opcao == "R": #Criar conta bancaria
+        cpf_registrado = input("Digite cpf registrado\n>>> ")
     
-    if opcao == "D":# Depositar
-        if vericar_limite() == True:
+    elif opcao == "D":# Depositar
+        if verificar_limite() == True:
             
             entrada = float(input("Qual o valor do deposito:\n>>> "))
             
