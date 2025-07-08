@@ -10,6 +10,8 @@
 from datetime import datetime, timedelta, timezone
 
 menu = """
+[U] criar conta
+[R] criar conta bancaria
 [D] depositar
 [S] saldo
 [C] sacar
