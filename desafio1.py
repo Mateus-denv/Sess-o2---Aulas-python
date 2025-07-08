@@ -6,11 +6,16 @@ menu = """
 [U] criar conta
 [R] criar conta bancaria
 [D] depositar
+[V] vincular conta
 [S] saldo
 [C] sacar
 [E] extrato
 [Q] Sair
 
+ADM
+[L] LISTAR CONTAS E USUARIOS
+[F] FILTRAR
+ 
 """
 LIMITES_DE_TRANSACOES_DIARIAS = 10
 LIMITE_PARA_SAQUE = 500
