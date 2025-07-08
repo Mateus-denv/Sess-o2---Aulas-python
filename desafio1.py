@@ -355,5 +355,38 @@ while True:
         print("\nPrograma encerrado")
         break
     
+    elif opcao == "V":
+        vincular_conta()
+        
+    elif opcao == "L":
+        print(f"""          
+        Todos usuarios
+        {usuarios}
+        Todas as contas
+        {contas}
+        """)
+    
+    elif opcao == "F":
+        ...
+        filtro = input("Digite o CPF que deseja filtrar\n>>> ")
+        
+        for us in usuarios:
+            if filtro == us[0]:
+                print('Usuario encontrado')
+                print(us)
+                contas_do_usuario = []
+                for conta in contas:
+                    if filtro == conta[0]:
+                        contas_do_usuario.append(conta)
+                        
+                if  contas_do_usuario is not  None:
+                    print("\nContas encontrasdas")
+                    print(contas_do_usuario)
+                else:
+                    print("\nO usuario não possui conta bancaria em seu CPF\n")
+                break
+            else:
+                print("\nO usuario não possui conta em seu CPF\n")
+            
     else:
         print("Opção invalida\n")
