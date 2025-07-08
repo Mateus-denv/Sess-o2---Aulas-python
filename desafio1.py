@@ -35,9 +35,7 @@ mascara_ptbr = '%d/%m/%Y %H:%M'
 # Data e hora atual no fuso horário de São Paulo (GMT-3)
 data_hora_atual = datetime.now(timezone(timedelta(hours=-3))).strftime(mascara_ptbr)
 
-# Função que verifica se o usuário ainda está dentro do limite diário de transações
 
-def vericar_limite():
     # Define o limite de 1 dia (poderia ser mais elaborado com data de comparação real)        
     LIMITE_DIARIO = 1
     
