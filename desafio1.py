@@ -188,9 +188,10 @@ def verificar_limite():
     data_limite = datetime.now(timezone(timedelta(hours=-3+LIMITE_DIARIO))).strftime(mascara_ptbr)
     
     # Verifica se a data atual ainda está dentro do limite e se não excedeu o número de transações
-    validacao = data_hora_atual <= data_limite and trasacoes_realizadas <= LIMITES_DE_TRANSACOES_DIARIAS
+    validacao = data_hora_atual <= data_limite and transacoes_realizadas <= LIMITES_DE_TRANSACOES_DIARIAS
     
     return validacao
+
 # Função que atualiza o extrato com o tipo de transação (depósito ou saque) e valor
 def atualizar_extrato(tipo, valor):
     
