@@ -249,21 +249,21 @@ def atualizar_extrato(tipo, valor):
         print("Não foi possivel adicionar o valor no extrato")
     
 # Função criada para realizar depósitos
-def depositar(saldo, entrada, transacoes_realizadas):
+def depositar(_saldo, _transacoes_realizadas,_entrada,/):
     # Adiciona o valor da entrada ao saldo atual
-    saldo += entrada
+    _saldo += _entrada
 
     # Incrementa o contador de transações realizadas
-    transacoes_realizadas += 1
+    _transacoes_realizadas += 1
 
     # Atualiza o extrato com o tipo "Deposito" e o valor depositado
-    atualizar_extrato("Deposito", entrada)
+    atualizar_extrato("Deposito", _entrada)
 
     # Retorna o saldo atualizado e o número de transações
-    return saldo, transacoes_realizadas
+    return _saldo, _transacoes_realizadas
 
 # Função criada para realizar saques
-def sacar(saldo, saida, transacoes_realizadas):
+def sacar(* saldo, saida, transacoes_realizadas):
     # Subtrai o valor do saque do saldo atual
     saldo -= saida
 
