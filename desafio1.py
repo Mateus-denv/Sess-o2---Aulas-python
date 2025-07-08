@@ -213,6 +213,21 @@ def atualizar_extrato(tipo, valor):
 
     else:  # Fallback caso o tipo seja inválido
         print("Não foi possivel adicionar o valor no extrato")
+    
+# Função criada para realizar depósitos
+def depositar(saldo, entrada, transacoes_realizadas):
+    # Adiciona o valor da entrada ao saldo atual
+    saldo += entrada
+
+    # Incrementa o contador de transações realizadas
+    transacoes_realizadas += 1
+
+    # Atualiza o extrato com o tipo "Deposito" e o valor depositado
+    atualizar_extrato("Deposito", entrada)
+
+    # Retorna o saldo atualizado e o número de transações
+    return saldo, transacoes_realizadas
+
 
 # Função para exibir o saldo atual do usuário
 def ver_saldo():
