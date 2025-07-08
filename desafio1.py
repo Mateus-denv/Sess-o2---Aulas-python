@@ -1,11 +1,4 @@
-# PROJETO DESAFIO DIO.ME 
-# Criando um Sistema Bancário com Python
-
-# O desafio proposto consistia na criação de um sistema bancário simples para um único usuário, respeitando quatro regras principais:
-# - Não permitir depósitos ou saques com valores negativos;
-# - Limitar saques a um valor máximo de R$ 500 por operação;
-# - Restringir o número de saques a 10 por dia;
-# - Registrar todas as movimentações em um extrato, acessível mediante solicitação do usuário.
+# Detalhes no arquivo nomeado desafio1.md
 
 from datetime import datetime, timedelta, timezone
 
