@@ -172,8 +172,25 @@ def criar_usuario(_nome,_data_de_nascimento):
     return "\nUsuario criado"
 
 # Função para criar um conta
-def criar_conta_bancaria():
-    ...
+def criar_conta_bancaria(administrador_da_conta,contas_ja_criadas):
+    agencia = "0001"
+    tipo_de_conta = ""
+    while True:
+        opcao = input("\nQual o tipo de conta deseja\n1-Crédito\n2-Débito\n>>> ")
+        if opcao == "1":
+            tipo_de_conta = "Crédito"
+            break
+        elif opcao == "2":
+            tipo_de_conta = "Débito"
+            break
+        else:
+            print("OPÇÃO INVALIDA!!!\n")
+    
+    contas_ja_criadas += 1
+    contas.append([administrador_da_conta, f"{agencia=}", f"conta={contas_ja_criadas}",f"{tipo_de_conta=}"]) 
+    
+    return contas_ja_criadas
+
 
 
                        
