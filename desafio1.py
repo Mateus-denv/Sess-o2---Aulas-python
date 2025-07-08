@@ -191,6 +191,25 @@ def criar_conta_bancaria(administrador_da_conta,contas_ja_criadas):
     
     return contas_ja_criadas
 
+# Função vincular conta aos usuarios
+def vincular_conta():
+    # Solicita ao usuário o CPF que deseja buscar
+    filtro = input("Digite o CPF que deseja filtrar\n>>> ")
+
+    # Percorre a lista de usuários
+    for usuario in usuarios:
+        # Verifica se o CPF do usuário atual é igual ao CPF digitado
+        if filtro == usuario[0]:
+            # Percorre a lista de contas
+            for conta in contas:
+                # Verifica se o CPF associado à conta é igual ao CPF digitado
+                if filtro == conta[0]:
+                    # Adiciona a parte da conta (campo conta[2]) ao final da lista do usuário
+                    usuario.append(conta[2])
+
+                    # Exibe o usuário atualizado com a conta vinculada
+                    print(usuario)
+                    print("Conta vinculada")
 
 
                        
