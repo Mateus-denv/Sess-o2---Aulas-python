@@ -278,9 +278,7 @@ while True:
             entrada = float(input("Qual o valor do deposito:\n>>> "))
             
             if entrada > 0:
-                saldo += entrada
-                trasacoes_realizadas += 1
-                atualizar_extrato("Deposito",entrada)
+                saldo, transacoes_realizadas = depositar(saldo,entrada=entrada,transacoes_realizadas=transacoes_realizadas)
                 print("Deposito realizado com sucesso")
 
             else:
@@ -298,9 +296,7 @@ while True:
             if valor < 500.00: # Atenção: valor limite é < 500, ou seja, R$ 499,99 é aceito, mas 500 não
                 
                 if valor > 0 and valor <= saldo:
-                    trasacoes_realizadas += 1
-                    saldo -= valor
-                    atualizar_extrato("Saque",valor)
+                    saldo, transacoes_realizadas = sacar(saldo=saldo,saida=valor,transacoes_realizadas=transacoes_realizadas)
                     print("Saque realizado com sucesso")
                     
                 else:
