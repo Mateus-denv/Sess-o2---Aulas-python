@@ -22,7 +22,12 @@ LIMITE_PARA_SAQUE = 500
 transacoes_realizadas = 0
 extrato = []
 saldo = 0
-
+usuarios = [[0,1],[0,1],[0,1]]
+contas = []
+nome = ''
+data_de_nascimento = ""
+cpf = ''
+endereco = ""
 # Máscara para formatação de data e hora no padrão brasileiro
 mascara_ptbr = '%d/%m/%Y %H:%M'
 # Data e hora atual no fuso horário de São Paulo (GMT-3)
