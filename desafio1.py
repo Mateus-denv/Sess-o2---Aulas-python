@@ -153,6 +153,34 @@ def validar_e_verificar_cpf():
     # Retorna o CPF válido e não cadastrado
     return cpf
          
+# Função para criar um usuario
+def criar_usuario(_nome,_data_de_nascimento):
+    
+    # Chama a função que valida o CPF e garante que ele não está cadastrado
+    cpf = validar_e_verificar_cpf()         
+    
+    logadoro = input("\nQual seu logadoro?\n(nome da rua, avenida, travessa etc)\n>>> ")
+    bairro = input("\nQual seu bairro?\n>>> ")
+    cidade = input("\nQual cidade reside?\n>>> ")
+    
+    # Chama a função que obtém a sigla do estado (SP, RJ, etc.)
+    sigla_do_estado = localizar_estado()   
+
+    # Monta o endereço completo com base nas informações anteriores
+    endereco = f"{logadoro} - {bairro} - {cidade}/{sigla_do_estado}"
+    
+    # Adiciona os dados do novo usuário á `usuarios`
+    usuarios.append([cpf, _nome, _data_de_nascimento, endereco])
+    
+    # Retorna uma mensagem informando que o usuário foi criado
+    return "\nUsuario criado"
+
+# Função para criar um conta
+def criar_conta_bancaria():
+    ...
+
+# Função que verifica se o usuário ainda está dentro do limite diário de transações
+def verificar_limite():
     # Define o limite de 1 dia (poderia ser mais elaborado com data de comparação real)        
     LIMITE_DIARIO = 1
     
