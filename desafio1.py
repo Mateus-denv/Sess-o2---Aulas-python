@@ -133,8 +133,10 @@ def validar_e_verificar_cpf():
 
                 # Chama a função `verificar_se_usuario_exite` para ver se o CPF já está cadastrado
                 if verificar_se_usuario_exite(cpf) == False:
-                    # Se não estiver cadastrado, sai do loop
-                    break
+                    
+                    # Se não estiver cadastrado, sai do loop e retorna o CPF válido e não cadastrado
+                    return cpf
+                
                 else: 
                     # Se já estiver cadastrado, exibe mensagem de erro
                     print(f"Usuario ja cadastrado\n{msg_erro}")
