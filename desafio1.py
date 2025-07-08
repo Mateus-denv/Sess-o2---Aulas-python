@@ -318,7 +318,7 @@ while True:
             entrada = float(input("Qual o valor do deposito:\n>>> "))
             
             if entrada > 0:
-                saldo, transacoes_realizadas = depositar(saldo,entrada=entrada,transacoes_realizadas=transacoes_realizadas)
+                saldo, transacoes_realizadas = depositar(_saldo=saldo,_entrada=entrada,_transacoes_realizadas=transacoes_realizadas)
                 print("Deposito realizado com sucesso")
 
             else:
