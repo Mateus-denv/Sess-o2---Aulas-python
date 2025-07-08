@@ -19,7 +19,7 @@ menu = """
 """
 LIMITES_DE_TRANSACOES_DIARIAS = 10
 LIMITE_PARA_SAQUE = 500
-trasacoes_realizadas = 0
+transacoes_realizadas = 0
 extrato = []
 saldo = 0
 
