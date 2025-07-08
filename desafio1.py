@@ -22,8 +22,9 @@ LIMITE_PARA_SAQUE = 500
 transacoes_realizadas = 0
 extrato = []
 saldo = 0
-usuarios = [[0,1],[0,1],[0,1]]
-contas = []
+usuarios = [[0]]
+contas = [[0]]
+cont_contas = 0
 nome = ''
 data_de_nascimento = ""
 cpf = ''
@@ -98,8 +99,7 @@ def localizar_estado():
             return "TO"
         else:
             print("Estado não encontrado, certifique que estaja escrito da forma correta\n")
-            
-            
+                    
 # Fução para indentificar se o usuario ja é cadastrado usando como verficação o CPF
 def verificar_se_usuario_exite(usuario):
     cont = 0 # Zera o contador a cada verificação
@@ -107,7 +107,7 @@ def verificar_se_usuario_exite(usuario):
     # loop para pegar cada cadastro
     for _cpf in usuarios:
         print(_cpf[0])
-        
+                
         # Se encotrado o cpf dentro da lista é comparado com o cpf recebido
         if _cpf[0] == usuario: 
             cont += 1  # Contador soma +1 e quebra o loop
@@ -151,6 +151,7 @@ def validar_e_verificar_cpf():
     # Retorna o CPF válido e não cadastrado
     return cpf
          
+
 # Função para criar um usuario
 def criar_usuario(_nome,_data_de_nascimento):
     
@@ -177,6 +178,8 @@ def criar_usuario(_nome,_data_de_nascimento):
 def criar_conta_bancaria():
     ...
 
+
+                       
 # Função que verifica se o usuário ainda está dentro do limite diário de transações
 def verificar_limite():
     # Define o limite de 1 dia (poderia ser mais elaborado com data de comparação real)        
