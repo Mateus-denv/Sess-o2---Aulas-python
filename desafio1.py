@@ -290,7 +290,7 @@ while True:
         ver_saldo()
         
     elif opcao == "C":# Sacar
-        if vericar_limite() == True:
+        if verificar_limite() == True:
             valor = float(input(f"Quanto deseja sacar?\n>>> "))
             
             if valor < 500.00: # Atenção: valor limite é < 500, ou seja, R$ 499,99 é aceito, mas 500 não
