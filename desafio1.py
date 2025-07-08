@@ -193,18 +193,25 @@ def verificar_limite():
     return validacao
 # Função que atualiza o extrato com o tipo de transação (depósito ou saque) e valor
 def atualizar_extrato(tipo, valor):
+    
+    # Obtém a data e hora atual no fuso horário de Brasília (UTC-3)
+    # Em seguida, formata a data usando uma máscara personalizada (ex: "%d/%m/%Y %H:%M")
+    data_hora_transação = datetime.now(timezone(timedelta(hours=-3))).strftime(mascara_ptbr)
+    
+    # Verifica se o tipo de operação é "Deposito"
     if tipo == "Deposito":
-        
-        data_deposito = datetime.now(timezone(timedelta(hours=-3))).strftime(mascara_ptbr)
-        extrato.append(f"{tipo} R$ {valor:.2f} {data_deposito}")
-        
+    
+        # Adiciona ao extrato uma entrada com o tipo, valor formatado e a data
+        extrato.append(f"{tipo} R$ {valor:.2f} {data_hora_transação}")
+    
+    # Verifica se o tipo de operação é "Saque"
     elif tipo == "Saque":
         
-        data_saque = datetime.now(timezone(timedelta(hours=-3))).strftime(mascara_ptbr)
-        extrato.append(f"{tipo} R$ -{valor:.2f} {data_saque}")
-      
+        # Adiciona ao extrato uma entrada com tipo, valor (negativo) e data
+        extrato.append(f"{tipo} R$ -{valor:.2f} {data_hora_transação}")
+
     else:  # Fallback caso o tipo seja inválido
-        print("Não foi possivel realizar transação")
+        print("Não foi possivel adicionar o valor no extrato")
 
 # Função para exibir o saldo atual do usuário
 def ver_saldo():
