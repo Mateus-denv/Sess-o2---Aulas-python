@@ -228,6 +228,19 @@ def depositar(saldo, entrada, transacoes_realizadas):
     # Retorna o saldo atualizado e o número de transações
     return saldo, transacoes_realizadas
 
+# Função criada para realizar saques
+def sacar(saldo, saida, transacoes_realizadas):
+    # Subtrai o valor do saque do saldo atual
+    saldo -= saida
+
+    # Incrementa o contador de transações realizadas
+    transacoes_realizadas += 1
+
+    # Atualiza o extrato com o tipo "Saque" e o valor sacado
+    atualizar_extrato("Saque", saida)
+
+    # Retorna o saldo atualizado e o número de transações
+    return saldo, transacoes_realizadas
 
 # Função para exibir o saldo atual do usuário
 def ver_saldo():
