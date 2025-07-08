@@ -102,6 +102,24 @@ def localizar_estado():
             print("Estado não encontrado, certifique que estaja escrito da forma correta\n")
             
             
+# Fução para indentificar se o usuario ja é cadastrado usando como verficação o CPF
+def verificar_se_usuario_exite(usuario):
+    cont = 0 # Zera o contador a cada verificação
+    
+    # loop para pegar cada cadastro
+    for _cpf in usuarios:
+        print(_cpf[0])
+        
+        # Se encotrado o cpf dentro da lista é comparado com o cpf recebido
+        if _cpf[0] == usuario: 
+            cont += 1  # Contador soma +1 e quebra o loop
+            break
+        
+    # Se cont for zero, retorna (False) que significa que o usuario não existe
+    validacao = cont is not 0 
+           
+    return  validacao
+
     # Define o limite de 1 dia (poderia ser mais elaborado com data de comparação real)        
     LIMITE_DIARIO = 1
     
