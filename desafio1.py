@@ -36,6 +36,72 @@ mascara_ptbr = '%d/%m/%Y %H:%M'
 data_hora_atual = datetime.now(timezone(timedelta(hours=-3))).strftime(mascara_ptbr)
 
 
+# Função para localizar o estado de cadastro
+def localizar_estado():
+    # loop incial para permite que usuario tente novamente
+    while True: 
+        estado = input("\nQual estado reside?\n>>> ")
+        estado = estado.lower()  # padroniza para evitar erro com maiúsculas
+        
+        # Procura o estado informado e retorna sua sigla correspondente
+        if estado == "acre":
+            return "AC"
+        elif estado == "alagoas":
+            return "AL"
+        elif estado == "amapa":
+            return "AP"
+        elif estado == "amazonas":
+            return "AM"
+        elif estado == "bahia":
+            return "BA"
+        elif estado == "ceara":
+            return "CE"
+        elif estado == "distrito federal":
+            return "DF"
+        elif estado == "espirito santo":
+            return "ES"
+        elif estado == "goias":
+            return "GO"
+        elif estado == "maranhao":
+            return "MA"
+        elif estado == "mato grosso":
+            return "MT"
+        elif estado == "mato grosso do sul":
+            return "MS"
+        elif estado == "minas gerais":
+            return "MG"
+        elif estado == "para":
+            return "PA"
+        elif estado == "paraiba":
+            return "PB"
+        elif estado == "parana":
+            return "PR"
+        elif estado == "pernambuco":
+            return "PE"
+        elif estado == "piaui":
+            return "PI"
+        elif estado == "rio de janeiro":
+            return "RJ"
+        elif estado == "rio grande do norte":
+            return "RN"
+        elif estado == "rio grande do sul":
+            return "RS"
+        elif estado == "rondonia":
+            return "RO"
+        elif estado == "roraima":
+            return "RR"
+        elif estado == "santa catarina":
+            return "SC"
+        elif estado == "sao paulo":
+            return "SP"
+        elif estado == "sergipe":
+            return "SE"
+        elif estado == "tocantins":
+            return "TO"
+        else:
+            print("Estado não encontrado, certifique que estaja escrito da forma correta\n")
+            
+            
     # Define o limite de 1 dia (poderia ser mais elaborado com data de comparação real)        
     LIMITE_DIARIO = 1
     
