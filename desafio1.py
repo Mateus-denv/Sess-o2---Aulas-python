@@ -120,6 +120,39 @@ def verificar_se_usuario_exite(usuario):
            
     return  validacao
 
+# Função onde é validade e verificado o cpf 
+def validar_e_verificar_cpf():
+    # Define uma mensagem de erro padrão para reutilizar em várias partes
+    msg_erro = "Erro! Informe novamente, verifique se CPF o está escrito corretamente"
+
+    # Laço infinito que só termina quando o CPF for válido e não estiver cadastrado
+    while True:
+        try:
+            # Transforma em `int` para garantir que são apenas números, e depois de volta em `str`
+            cpf = str(int(input("\nQual seu CPF?\nSem pontos(.) ou traço(-), somente numeros\n>>> ")))
+            
+            # Verifica se o CPF tem 11 dígitos
+            if len(cpf) == 11:
+
+                # Chama a função `verificar_se_usuario_exite` para ver se o CPF já está cadastrado
+                if verificar_se_usuario_exite(cpf) == False:
+                    # Se não estiver cadastrado, sai do loop
+                    break
+                else: 
+                    # Se já estiver cadastrado, exibe mensagem de erro
+                    print(f"Usuario ja cadastrado\n{msg_erro}")
+                
+            else:
+                # Se o CPF não tiver 11 dígitos, exibe mensagem de erro
+                print(msg_erro)
+            
+        except ValueError:
+            # Caso o usuário digite algo que não seja número, mostra mensagem de erro
+            print(msg_erro)
+            
+    # Retorna o CPF válido e não cadastrado
+    return cpf
+         
     # Define o limite de 1 dia (poderia ser mais elaborado com data de comparação real)        
     LIMITE_DIARIO = 1
     
