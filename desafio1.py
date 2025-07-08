@@ -106,7 +106,6 @@ def verificar_se_usuario_exite(usuario):
     
     # loop para pegar cada cadastro
     for _cpf in usuarios:
-        print(_cpf[0])
                 
         # Se encotrado o cpf dentro da lista é comparado com o cpf recebido
         if _cpf[0] == usuario: 
@@ -147,10 +146,6 @@ def validar_e_verificar_cpf():
         except ValueError:
             # Caso o usuário digite algo que não seja número, mostra mensagem de erro
             print(msg_erro)
-            
-    # Retorna o CPF válido e não cadastrado
-    return cpf
-         
 
 # Função para criar um usuario
 def criar_usuario(_nome,_data_de_nascimento):
