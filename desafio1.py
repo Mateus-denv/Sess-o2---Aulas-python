@@ -304,8 +304,14 @@ while True:
         print(criar_usuario(nome,data_de_nascimento))
         
     elif opcao == "R": #Criar conta bancaria
-        cpf_registrado = input("Digite cpf registrado\n>>> ")
-    
+        cpf_registrado = input("Digite o cpf registrado?\n>>> ")
+        
+        if verificar_se_usuario_exite(cpf_registrado) == True:
+            cont_contas = criar_conta_bancaria(cpf_registrado,contas_ja_criadas=cont_contas)
+            print("Conta bancaria criada")
+        else:
+            print("\nErro!\nO usuario informado não existe\nInforme novamente, verifique se CPF o está escrito corretamente")
+            
     elif opcao == "D":# Depositar
         if verificar_limite() == True:
             
